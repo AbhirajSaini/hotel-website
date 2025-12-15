@@ -1,0 +1,270 @@
+<html>
+<head>
+    <title>Hotel Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+
+    <style>
+        .menu-hidden {
+            display: none;
+        }
+        .menu-visible {
+            display: block;
+        }
+        /* Active link color */
+        .active-link {
+            background-color: #ff6f00; /* Active color */
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-roboto">
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-3xl font-bold">
+                <img src="https://storage.googleapis.com/a1aa/image/Bpka0zqrJL0iAKAcrFfQFNMIFRke5nwllNd0K4QOkMQ.jpg" alt="Hotel Logo" class="inline-block" width="50" height="50"/>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="index.html" id="home-link" class="text-white bg-orange-600 px-4 py-2 rounded-full active-link">Home</a>
+                <a href="About.html" id="about-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">About</a>
+                <a href="Services.html" id="services-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">Services</a>
+                <a href="Book.html" id="book-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">Book</a>
+                <a href="Contact.html" id="contact-link" class="text-white bg-orange-600 px-4 py-2 rounded-full">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="menu-hidden md:hidden bg-white shadow-md">
+            <a href="index.html" id="mobile-home-link" class="block text-gray-700 px-4 py-2">Home</a>
+            <a href="About.html" id="mobile-about-link" class="block text-gray-700 px-4 py-2">About</a>
+            <a href="Services.html" id="mobile-services-link" class="block text-gray-700 px-4 py-2">Services</a>
+            <a href="Book.html" id="mobile-book-link" class="block text-gray-700 px-4 py-2">Book</a>
+            <a href="Contact.html" id="mobile-contact-link" class="block text-gray-700 px-4 py-2">Contact</a>
+        </nav>
+    </header>
+   
+    <script>
+        // Toggle the mobile menu visibility
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('menu-hidden')) {
+                menu.classList.remove('menu-hidden');
+                menu.classList.add('menu-visible');
+            } else {
+                menu.classList.remove('menu-visible');
+                menu.classList.add('menu-hidden');
+            }
+        });
+
+        // Hide the mobile menu if clicked outside of it
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('mobile-menu');
+            var menuToggle = document.getElementById('menu-toggle');
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('menu-visible');
+                menu.classList.add('menu-hidden');
+            }
+        });
+
+
+   
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-gray-100">
+    <!-- Header Section -->
+    <div class="relative">
+     <img alt="Hotel lobby with people at the reception" class="w-full h-96 object-cover" height="400" src="https://storage.googleapis.com/a1aa/image/u3yhf9P2Ml9BLFC4juj6WP4QFWPKKKHjK63u7ih2Yco.jpg" width="1200"/>
+     <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center">
+      <h1 class="text-white text-4xl font-bold">
+       Contact Page
+      </h1>
+      <p class="text-white mt-2">
+       Welcome to Hotel XYZ, a place where emotions meet excellence
+      </p>
+     </div>
+    </div>
+    <!-- Contact Form Section -->
+    <div class="max-w-4xl mx-auto mt-10 p-6 bg-white rounded-lg shadow-lg">
+     <h2 class="text-2xl font-bold text-center mb-6">
+      Get in Touch With us
+     </h2>
+     <form class="space-y-4">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+       <input class="p-3 border rounded-md w-full" placeholder="Name" type="text"/>
+       <input class="p-3 border rounded-md w-full" placeholder="Last Name" type="text"/>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+       <input class="p-3 border rounded-md w-full" placeholder="Email Id" type="email"/>
+       <input class="p-3 border rounded-md w-full" placeholder="Mobile No" type="text"/>
+      </div>
+      <textarea class="p-3 border rounded-md w-full h-32" placeholder="Message"></textarea>
+      <div class="text-center">
+       <button class="bg-orange-600 text-white py-3 px-6 rounded-md" type="submit">
+        Submit Now
+       </button>
+      </div>
+     </form>
+    </div>
+    <!-- Info Section -->
+    <div class="max-w-4xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <i class="fas fa-map-marker-alt text-red-500 text-4xl mb-4">
+      </i>
+      <h3 class="text-xl font-bold">
+       Location
+      </h3>
+      <p>
+       Location
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <i class="fas fa-phone-alt text-green-500 text-4xl mb-4">
+      </i>
+      <h3 class="text-xl font-bold">
+       Contact
+      </h3>
+      <p>
+       +91 123 456 7890
+      </p>
+      <p>
+       +91 123 456 7890
+      </p>
+     </div>
+     <div class="bg-white p-6 rounded-lg shadow-lg">
+      <i class="fas fa-calendar-check text-blue-500 text-4xl mb-4">
+      </i>
+      <h3 class="text-xl font-bold">
+       Reservation
+      </h3>
+      <p>
+       Confirm your booking by checking date
+      </p>
+     </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-white" style="padding-top: 100px;">
+    <footer class="bg-[#9c5d1e] text-white py-10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Hotel LOGO</h2>
+                <p class="mt-4 text-sm">
+                    Hotel Description<br>
+                    Whether you're traveling for business or leisure, our beautifully designed rooms and suites provide a serene escape with modern amenities and breathtaking views.
+                </p>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Contact Info</h2>
+                <p class="mt-4 text-sm">
+                    +91 123 456 7890<br>
+                    +91 123 456 7890<br>
+                    example@gmail.com<br>
+                    Address
+                </p>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Explore</h2>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="About.html" class="hover:underline">About</a></li>
+                    <li><a href="Services.html" class="hover:underline">Service</a></li>
+                    <li><a href="Book.html" class="hover:underline">Booking</a></li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">For Booking</h2>
+                <div class="mt-4">
+                    <input type="email" placeholder="Enter Your Email" class="p-2 w-full mb-2 text-black text-sm">
+                    <button class="bg-black text-white py-2 px-4 w-full text-sm">Contact</button>
+                </div>
+                <h2 class="text-2xl font-bold mt-6">Follow us</h2>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-white text-center py-4">
+        <p>All Rights reserved</p>
+    </div>
+</div>
+
+
+
+
+
+
+    
+</body>
+</html>

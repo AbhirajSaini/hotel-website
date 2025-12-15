@@ -1,0 +1,414 @@
+<html>
+<head>
+    <title>Hotel Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+
+    <style>
+        .menu-hidden {
+            display: none;
+        }
+        .menu-visible {
+            display: block;
+        }
+        /* Active link color */
+        .active-link {
+            background-color: #ff6f00; /* Active color */
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-roboto">
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-3xl font-bold">
+                <img src="https://storage.googleapis.com/a1aa/image/Bpka0zqrJL0iAKAcrFfQFNMIFRke5nwllNd0K4QOkMQ.jpg" alt="Hotel Logo" class="inline-block" width="50" height="50"/>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="index.html" id="home-link" class="text-white bg-orange-600 px-4 py-2 rounded-full active-link">Home</a>
+                <a href="About.html" id="about-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">About</a>
+                <a href="Services.html" id="services-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">Services</a>
+                <a href="Book.html" id="book-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">Book</a>
+                <a href="Contact.html" id="contact-link" class="text-white bg-orange-600 px-4 py-2 rounded-full">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="menu-hidden md:hidden bg-white shadow-md">
+            <a href="index.html" id="mobile-home-link" class="block text-gray-700 px-4 py-2">Home</a>
+            <a href="About.html" id="mobile-about-link" class="block text-gray-700 px-4 py-2">About</a>
+            <a href="Services.html" id="mobile-services-link" class="block text-gray-700 px-4 py-2">Services</a>
+            <a href="Book.html" id="mobile-book-link" class="block text-gray-700 px-4 py-2">Book</a>
+            <a href="Contact.html" id="mobile-contact-link" class="block text-gray-700 px-4 py-2">Contact</a>
+        </nav>
+    </header>
+    <main class="relative pt-20">
+        <div class="relative">
+            <img src="https://storage.googleapis.com/a1aa/image/qj2m62yTE4XqKRI1Ms0uOapMr1_EKpsJN7HBEcwgxqM.jpg" alt="Hotel Lobby" class="w-full h-[800px] md:h-[700px] rounded-b-3xl" width="1200" height="800"/>
+            <div class="absolute inset-0 bg-black opacity-50 rounded-b-3xl"></div>
+        </div>
+        <div class="absolute inset-0 flex flex-col items-center justify-center text-center text-white px-4 mt-32 md:mt-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Welcome to [Hotel Name] – Your Perfect Getaway!</h1>
+            <p class="text-lg md:text-xl mb-8">Experience luxury, comfort, and world-class hospitality in the heart of [Location]. Book your stay now and create unforgettable memories!</p>
+            <div class="bg-gray-800 bg-opacity-50 rounded-lg p-4 md:p-8 flex flex-wrap justify-center space-x-4">
+                <div class="text-center p-4">
+                    <i class="fas fa-bed text-3xl mb-2"></i>
+                    <h2 class="text-xl font-bold">100+ Luxury Room</h2>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fas fa-concierge-bell text-3xl mb-2"></i>
+                    <h2 class="text-xl font-bold">Luxury Services</h2>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fas fa-swimming-pool text-3xl mb-2"></i>
+                    <h2 class="text-xl font-bold">All Facilities</h2>
+                </div>
+                <div class="text-center p-4">
+                    <i class="fas fa-utensils text-3xl mb-2"></i>
+                    <h2 class="text-xl font-bold">All Dining</h2>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Toggle the mobile menu visibility
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('menu-hidden')) {
+                menu.classList.remove('menu-hidden');
+                menu.classList.add('menu-visible');
+            } else {
+                menu.classList.remove('menu-visible');
+                menu.classList.add('menu-hidden');
+            }
+        });
+
+        // Hide the mobile menu if clicked outside of it
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('mobile-menu');
+            var menuToggle = document.getElementById('menu-toggle');
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('menu-visible');
+                menu.classList.add('menu-hidden');
+            }
+        });
+
+
+   
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-gray-100">
+<div class="container mx-auto py-12">
+<div class="text-center mb-8">
+<h1 class="text-5xl font-bold relative inline-block" style="font-family: 'Playfair Display', serif;">
+Featured Rooms &amp; Suites
+<div class="absolute left-0 right-0 bottom--0 h-1 bg-orange-600 mt-2 "  ></div>
+</h1>
+<p class="text-gray-600 mt-4">
+Showcase popular or luxury rooms with images, brief descriptions, and a "View Details" button.
+</p>
+</div>
+<div class="flex flex-wrap justify-center gap-6">
+<div class="bg-white shadow-md rounded-lg overflow-hidden w-80">
+<img alt="Luxurious room with a large bed, bedside lamps, and elegant decor" class="w-full h-48 object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/5HyCeBVrQbzfuJSmGGwB1gDNgx08EMWJ2mwiP_fr-o4.jpg" width="320"/>
+<div class="p-4 flex flex-col items-center">
+<h2 class="text-lg font-bold mb-2">
+Room Specifications
+</h2>
+<p class="text-gray-600 mb-4 text-center">
+Creating a hotel website requires a well-structured design that ensures a seamless user experience while providing essential information.
+</p>
+<button class="bg-white text-gray-800 border border-gray-800 py-2 px-4 rounded hover:bg-gray-800 hover:text-white transition">
+See More
+</button>
+</div>
+</div>
+<div class="bg-white shadow-md rounded-lg overflow-hidden w-80">
+<img alt="Modern room with a large bed, a desk, and a view of the city" class="w-full h-48 object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/Rxg_W9fF-cefJev_VLpwD-bSBYPfTU-E-9QECnM7ITY.jpg" width="320"/>
+<div class="p-4 flex flex-col items-center">
+<h2 class="text-lg font-bold mb-2">
+Room Specifications
+</h2>
+<p class="text-gray-600 mb-4 text-center">
+Creating a hotel website requires a well-structured design that ensures a seamless user experience while providing essential information.
+</p>
+<button class="bg-white text-gray-800 border border-gray-800 py-2 px-4 rounded hover:bg-gray-800 hover:text-white transition">
+See More
+</button>
+</div>
+</div>
+<div class="bg-white shadow-md rounded-lg overflow-hidden w-80">
+<img alt="Spacious room with a large bed, a seating area, and a view of the mountains" class="w-full h-48 object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/lDmSeWH9stSqDVO4iX4BkYJweynLzlqZY5U-0n--bLo.jpg" width="320"/>
+<div class="p-4 flex flex-col items-center">
+<h2 class="text-lg font-bold mb-2">
+Room Specifications
+</h2>
+<p class="text-gray-600 mb-4 text-center">
+Creating a hotel website requires a well-structured design that ensures a seamless user experience while providing essential information.
+</p>
+<button class="bg-white text-gray-800 border border-gray-800 py-2 px-4 rounded hover:bg-gray-800 hover:text-white transition">
+See More
+</button>
+</div>
+</div>
+</div>
+<div class="text-center mt-8">
+<button class="bg-gray-300 text-gray-800 py-2 px-6 rounded hover:bg-gray-400 transition">
+Explore More
+</button>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="font-roboto">
+    <div class="relative">
+     <img alt="A luxurious hotel lobby with comfortable seating and elegant decor" class="w-full h-auto" height="400" src="https://storage.googleapis.com/a1aa/image/5AXkpZynBsvgWToeIAKiTuy6ODhvCsWbowfn8oYIIO8.jpg" width="1200" style="height: 500PX;"/>
+     <div class="absolute inset-0 bg-black opacity-50">
+     </div>
+     <div class="absolute inset-0 flex items-center justify-center">
+      <h1 class="text-white text-4xl md:text-6xl font-bold">
+       A New Vision Of Comfort
+      </h1>
+     </div>
+    </div>
+</DIV>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-white text-gray-800">
+    <div class="container mx-auto p-6">
+     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="space-y-6">
+       <img alt="Luxurious hotel swimming pool at night with city lights in the background" class="rounded-lg w-full h-64 object-cover" src="https://storage.googleapis.com/a1aa/image/Z6zA3PJtq14J95NMrnhQQhoRkUTMRf_JH-EDzDS8P_I.jpg"/>
+       <div class="grid grid-cols-2 gap-6">
+        <img alt="Modern hotel building exterior with lights" class="rounded-lg w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/xyF_CdvfkS7n0bZtwfZJxtlEww7fz-SVXyQLtNOIMDQ.jpg"/>
+        <img alt="Elegant hotel building with classic architecture" class="rounded-lg w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/hyrWY7RBo52i6Mg3GAXX1F41HVwogaDEKE8ChOMYQuw.jpg"/>
+       </div>
+      </div>
+      <div>
+       <h2 class="text-base font-semibold text-gray-500">
+        Our Services
+       </h2>
+       <h1 class="text-3xl font-bold text-gray-900 mt-2" style="  font-family: 'Roboto', sans-serif;">
+        Our luxurious rooms and suites offer a perfect blend of comfort
+       </h1>
+       <p class="mt-4 text-lg text-gray-700" style="  font-family: 'Roboto', sans-serif;"> 
+        At [Hotel Name], we are committed to providing an exceptional hospitality experience with world-class services tailored to meet the needs of every guest. Our luxurious rooms and suites offer a perfect blend of comfort and elegance, ensuring a restful stay. Indulge in gourmet dining at our in-house restaurants, featuring a diverse menu of local and international cuisine. Relax and rejuvenate at our spa, take a refreshing dip in our swimming pool, or stay active at our fully equipped fitness center. We also offer state-of-the-art conference and banquet facilities, making us the perfect choice for both leisure and business travelers.
+       </p>
+      </div>
+     </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+    body {
+        font-family: 'Roboto', sans-serif;
+    }
+    .slider {
+        display: flex;
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+    }
+    .slider-track {
+        display: flex;
+        animation: scroll 10s linear infinite;
+    }
+    .slider-item {
+        flex: 0 0 auto;
+        margin: 0 10px;
+        transform: scale(0.8);
+        transition: transform 0.3s;
+    }
+    .slider-item:hover {
+        transform: scale(1);
+    }
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-300px * 4)); }
+    }
+</style>
+
+
+<div class="bg-white text-center py-10">
+<div class="container mx-auto">
+    <h1 class="text-2xl font-bold mb-2">Dining Options</h1>
+    <p class="text-gray-600 mb-8">Restaurant menus, bar/lounge details.</p>
+    <div class="slider">
+        <div class="slider-track">
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+            <!-- Repeat the items to create the infinite effect -->
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+            <div class="slider-item">
+                <img src="https://storage.googleapis.com/a1aa/image/rDDaUNj6Htm_UxQg6FFNojs1jQGXBCCjQ0c6cfDOhgE.jpg" alt="Image of a restaurant with a beautiful sunset and palm trees" width="300" height="150">
+            </div>
+        </div>
+    </div>
+    <p class="text-gray-600 mt-8">Event Hosting: Weddings, conferences, corporate events.</p>
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-white">
+    <footer class="bg-[#9c5d1e] text-white py-10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Hotel LOGO</h2>
+                <p class="mt-4 text-sm">
+                    Hotel Description<br>
+                    Whether you're traveling for business or leisure, our beautifully designed rooms and suites provide a serene escape with modern amenities and breathtaking views.
+                </p>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Contact Info</h2>
+                <p class="mt-4 text-sm">
+                    +91 123 456 7890<br>
+                    +91 123 456 7890<br>
+                    example@gmail.com<br>
+                    Address
+                </p>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Explore</h2>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="About.html" class="hover:underline">About</a></li>
+                    <li><a href="Services.html" class="hover:underline">Service</a></li>
+                    <li><a href="Book.html" class="hover:underline">Booking</a></li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">For Booking</h2>
+                <div class="mt-4">
+                    <input type="email" placeholder="Enter Your Email" class="p-2 w-full mb-2 text-black text-sm">
+                    <button class="bg-black text-white py-2 px-4 w-full text-sm">Contact</button>
+                </div>
+                <h2 class="text-2xl font-bold mt-6">Follow us</h2>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-white text-center py-4">
+        <p>All Rights reserved</p>
+    </div>
+</div>
+
+
+</body>
+</html>

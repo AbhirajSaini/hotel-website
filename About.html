@@ -1,0 +1,438 @@
+<html>
+<head>
+    <title>Hotel Landing Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+
+
+    <style>
+        .menu-hidden {
+            display: none;
+        }
+        .menu-visible {
+            display: block;
+        }
+        /* Active link color */
+        .active-link {
+            background-color: #ff6f00; /* Active color */
+            color: white;
+        }
+    </style>
+</head>
+<body class="font-roboto">
+    <header class="bg-white shadow-md fixed w-full z-10">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <div class="text-3xl font-bold">
+                <img src="https://storage.googleapis.com/a1aa/image/Bpka0zqrJL0iAKAcrFfQFNMIFRke5nwllNd0K4QOkMQ.jpg" alt="Hotel Logo" class="inline-block" width="50" height="50"/>
+            </div>
+            <nav class="hidden md:flex space-x-4">
+                <a href="index.html" id="home-link" class="text-white bg-orange-600 px-4 py-2 rounded-full active-link">Home</a>
+                <a href="About.html" id="about-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">About</a>
+                <a href="Services.html" id="services-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">Services</a>
+                <a href="Book.html" id="book-link" class="text-gray-700 bg-gray-200 px-4 py-2 rounded-full">Book</a>
+                <a href="Contact.html" id="contact-link" class="text-white bg-orange-600 px-4 py-2 rounded-full">Contact</a>
+            </nav>
+            <div class="md:hidden">
+                <button id="menu-toggle" class="text-gray-700 focus:outline-none">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+        </div>
+        <nav id="mobile-menu" class="menu-hidden md:hidden bg-white shadow-md">
+            <a href="index.html" id="mobile-home-link" class="block text-gray-700 px-4 py-2">Home</a>
+            <a href="About.html" id="mobile-about-link" class="block text-gray-700 px-4 py-2">About</a>
+            <a href="Services.html" id="mobile-services-link" class="block text-gray-700 px-4 py-2">Services</a>
+            <a href="Book.html" id="mobile-book-link" class="block text-gray-700 px-4 py-2">Book</a>
+            <a href="Contact.html" id="mobile-contact-link" class="block text-gray-700 px-4 py-2">Contact</a>
+        </nav>
+    </header>
+   
+    <script>
+        // Toggle the mobile menu visibility
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            var menu = document.getElementById('mobile-menu');
+            if (menu.classList.contains('menu-hidden')) {
+                menu.classList.remove('menu-hidden');
+                menu.classList.add('menu-visible');
+            } else {
+                menu.classList.remove('menu-visible');
+                menu.classList.add('menu-hidden');
+            }
+        });
+
+        // Hide the mobile menu if clicked outside of it
+        document.addEventListener('click', function(event) {
+            var menu = document.getElementById('mobile-menu');
+            var menuToggle = document.getElementById('menu-toggle');
+            if (!menu.contains(event.target) && !menuToggle.contains(event.target)) {
+                menu.classList.remove('menu-visible');
+                menu.classList.add('menu-hidden');
+            }
+        });
+
+
+   
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-white text-gray-800">
+    
+    <div class="bg-gray-100 flex items-center justify-center" style="padding-top: 100px;">
+        <div class="relative w-full max-w-7xl">
+         <img alt="A beautiful resort with a pool surrounded by lush greenery and modern buildings" class="w-full h-96 object-cover rounded-lg" src="https://storage.googleapis.com/a1aa/image/RYCRGWKoXro1UZEWqBrNA_9ElNry6MxVJrvB8Vimp5k.jpg"/>
+         <div class="absolute inset-0 flex flex-col items-center justify-center bg-red-500 bg-opacity-50 rounded-lg">
+          <h1 class="text-white text-3xl md:text-4xl font-semibold">
+           About Page
+          </h1>
+          <p class="text-white text-lg md:text-xl mt-2">
+            Welcome to [Restaurant Name], a place where tradition meets innovation.
+        </p>
+         </div>
+        </div>
+    </div>
+
+
+    <div class="container mx-auto mt-12 px-4">
+     <div class="flex flex-col md:flex-row items-center">
+      <div class="flex flex-col space-y-4 md:w-1/2">
+       <div class="relative">
+        <img alt="Elegant restaurant interior with white tree decor" class="rounded-lg shadow-lg" height="400" src="https://storage.googleapis.com/a1aa/image/BXGBPRkZhsX4jCONtiISWgJ90T_ajsaMTVv1ivSg-l0.jpg" width="300"/>
+        <div class="absolute inset-0 flex justify-center items-center">
+         <div class="bg-white w-12 h-12 rounded-full">
+         </div>
+        </div>
+       </div>
+       <img alt="Restaurant with modern decor and red chairs" class="rounded-lg shadow-lg" src="https://storage.googleapis.com/a1aa/image/ueDmB00e1lKhC9a9g6AH1VoKIOjqsqqD_gQ_46O8xZk.jpg"/>
+      </div>
+      <div class="md:w-1/2 md:ml-8 mt-8 md:mt-0">
+       <h2 class="text-gray-500 text-sm">
+        WHAT MAKES US UNIQUE?
+       </h2>
+       <h3 class="text-2xl text-orange-600 font-bold mt-2">
+        Our team is dedicated to making you feel at home.
+       </h3>
+       <p class="text-gray-700 mt-4">
+        From they fine john he give of rich he. They age and draw mrs like. Improving end distrusts may instantly was household applauded incommode. Why kept very ever home mrs. Considered sympathize ten uncommonly occasional assistance sufficient not.
+       </p>
+       <button class="mt-6 bg-orange-600 text-white py-2 px-6 rounded-full shadow-lg hover:bg-orange-700 transition duration-300">
+        EXPLORE MORE
+       </button>
+      </div>
+     </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+<div class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div class="bg-white p-12 shadow-lg rounded-lg flex w-full h-auto min-h-[500px]">
+        <!-- Left Section -->
+        <div class="w-1/2 pr-8">
+            <h4 class="text-sm font-bold text-gray-700">Our Vision</h4>
+            <h2 class="text-2xl font-semibold text-amber-700 mt-2 leading-snug">
+                We offer a seamless and convenient <br> room booking experience
+            </h2>
+            <p class="text-gray-600 mt-4 text-base">
+                Seamless room booking services, luxurious accommodations, and personalized hospitality 
+                that exceeds expectations. Our goal is to blend technology with warmth, ensuring a hassle-free 
+                booking process and an unforgettable stay for every guest.
+            </p>
+        </div>
+        
+        <!-- Right Section -->
+        <div class="w-1/2 flex flex-col space-y-6">
+            <div class="bg-white shadow-md p-6 rounded-lg text-center font-semibold border border-gray-300 text-lg">
+                Seamless Booking Experience
+            </div>
+            <div class="bg-white shadow-md p-6 rounded-lg text-center font-semibold border border-gray-300 text-lg">
+                Exceptional Guest Experience
+            </div>
+            <div class="bg-white shadow-md p-6 rounded-lg text-center font-semibold border border-gray-300 text-lg">
+                Commitment to Excellence
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ---------- -->
+
+ <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const counters = document.querySelectorAll('.counter');
+            counters.forEach(counter => {
+                counter.innerText = '0';
+                const updateCounter = () => {
+                    const target = +counter.getAttribute('data-target');
+                    const count = +counter.innerText;
+                    const increment = target / (3000 / 16.67); // 3000ms / 16.67ms per frame (60fps)
+                    if (count < target) {
+                        counter.innerText = `${Math.ceil(count + increment)}`;
+                        setTimeout(updateCounter, 16.67);
+                    } else {
+                        counter.innerText = target;
+                    }
+                };
+                updateCounter();
+            });
+        });
+    </script>
+
+<div class="bg-gray-100">
+    <div class="relative">
+        <img alt="A luxurious hotel poolside with palm trees and lounge chairs" class="w-full h-48 object-cover" src="https://storage.googleapis.com/a1aa/image/zi3NKHvkJb4jdka2luH1caBtq-HuhQkvvGcogH-N8xE.jpg"/>
+        <div class="absolute inset-0 flex justify-center items-center space-x-4">
+            <div class="bg-black bg-opacity-50 text-white text-center p-8">
+                <p class="text-3xl font-semibold counter" data-target="30">0</p>
+                <p class="text-xl">Cities</p>
+            </div>
+            <div class="bg-black bg-opacity-50 text-white text-center p-8">
+                <p class="text-3xl font-semibold counter" data-target="1500">0</p>
+                <p class="text-xl">Clients</p>
+            </div>
+            <div class="bg-black bg-opacity-50 text-white text-center p-8">
+                <p class="text-3xl font-semibold counter" data-target="35">0</p>
+                <p class="text-xl">Hotel</p>
+            </div>
+            <div class="bg-black bg-opacity-50 text-white text-center p-8">
+                <p class="text-3xl font-semibold counter" data-target="800">0</p>
+                <p class="text-xl">Room</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="font-roboto bg-white">
+  <div class="container mx-auto px-4 py-16">
+   <div class="flex flex-col md:flex-row items-center md:items-start">
+    <div class="md:w-1/3 mb-8 md:mb-0">
+     <h2 class="text-4xl font-bold text-brown-700 mb-4" style="color:#ff6f00;">
+      What Our Customers Says
+     </h2>
+     <p class="text-lg text-gray-700 mb-4">
+      Your comfort and satisfaction are our top priorities. Hear from our guests about their unforgettable stays, exceptional service, and seamless booking experience.
+     </p>
+     <p class="text-lg text-gray-700">
+      Whether it's a relaxing getaway, a business trip, or a family vacation, we strive to make every moment special. Read their stories and discover why our hotel is the perfect choice for your next stay.
+     </p>
+    </div>
+    <div class="md:w-2/3 flex flex-wrap justify-center md:justify-start">
+     <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg" style="background-color: #F5F5F5;">
+       <div class="flex items-center mb-4">
+        <img alt="Customer photo" class="w-16 h-16 rounded-full border-2 border-gray-300" height="100" src="https://storage.googleapis.com/a1aa/image/I-JA26mR6iuDsgycM9Grr-2fOLbCfTBs2Bd65RfOIas.jpg" width="100"/>
+       </div>
+       <div class="text-center">
+        <div class="flex justify-center mb-2">
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">
+         Rahul Kumar
+        </h3>
+        <p class="text-gray-600 text-sm">
+         Had an amazing stay! The rooms were spotless, the staff was super friendly, and the hotel premises were flawless. Highly recommend coming back here for the next vacation. Everything was just perfect. The cozy ambiance, stunning views, and top-notch amenities made our stay unforgettable. Highly recommend this place for anyone looking to relax, unwind, and enjoy a wonderful experience. Plus, the breakfast was delicious.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg" style="background-color: #F5F5F5;">
+       <div class="flex items-center mb-4">
+        <img alt="Customer photo" class="w-16 h-16 rounded-full border-2 border-gray-300" height="100" src="https://storage.googleapis.com/a1aa/image/I-JA26mR6iuDsgycM9Grr-2fOLbCfTBs2Bd65RfOIas.jpg" width="100"/>
+       </div>
+       <div class="text-center">
+        <div class="flex justify-center mb-2">
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">
+         Rahul Kumar
+        </h3>
+        <p class="text-gray-600 text-sm">
+         Had an amazing stay! The rooms were spotless, the staff was super friendly, and the hotel premises were flawless. Highly recommend coming back here for the next vacation. Everything was just perfect. The cozy ambiance, stunning views, and top-notch amenities made our stay unforgettable. Highly recommend this place for anyone looking to relax, unwind, and enjoy a wonderful experience. Plus, the breakfast was delicious.
+        </p>
+       </div>
+      </div>
+     </div>
+     <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+      <div class="bg-gray-100 p-6 rounded-lg shadow-lg" style="background-color: #F5F5F5;">
+       <div class="flex items-center mb-4">
+        <img alt="Customer photo" class="w-16 h-16 rounded-full border-2 border-gray-300" height="100" src="https://storage.googleapis.com/a1aa/image/I-JA26mR6iuDsgycM9Grr-2fOLbCfTBs2Bd65RfOIas.jpg" width="100"/>
+       </div>
+       <div class="text-center">
+        <div class="flex justify-center mb-2">
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+         <i class="fas fa-star text-yellow-500">
+         </i>
+        </div>
+        <h3 class="text-xl font-bold text-gray-800 mb-2">
+         Rahul Kumar
+        </h3>
+        <p class="text-gray-600 text-sm">
+         Had an amazing stay! The rooms were spotless, the staff was super friendly, and the hotel premises were flawless. Highly recommend coming back here for the next vacation. Everything was just perfect. The cozy ambiance, stunning views, and top-notch amenities made our stay unforgettable. Highly recommend this place for anyone looking to relax, unwind, and enjoy a wonderful experience. Plus, the breakfast was delicious.
+        </p>
+       </div>
+      </div>
+     </div>
+    </div>
+   </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="bg-white">
+    <footer class="bg-[#9c5d1e] text-white py-10">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between space-y-6 md:space-y-0 md:space-x-4">
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Hotel LOGO</h2>
+                <p class="mt-4 text-sm">
+                    Hotel Description<br>
+                    Whether you're traveling for business or leisure, our beautifully designed rooms and suites provide a serene escape with modern amenities and breathtaking views.
+                </p>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Contact Info</h2>
+                <p class="mt-4 text-sm">
+                    +91 123 456 7890<br>
+                    +91 123 456 7890<br>
+                    example@gmail.com<br>
+                    Address
+                </p>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">Explore</h2>
+                <ul class="mt-4 space-y-2 text-sm">
+                    <li><a href="index.html" class="hover:underline">Home</a></li>
+                    <li><a href="About.html" class="hover:underline">About</a></li>
+                    <li><a href="Services.html" class="hover:underline">Service</a></li>
+                    <li><a href="Book.html" class="hover:underline">Booking</a></li>
+                </ul>
+            </div>
+            <div class="w-full md:w-1/4">
+                <h2 class="text-2xl font-bold">For Booking</h2>
+                <div class="mt-4">
+                    <input type="email" placeholder="Enter Your Email" class="p-2 w-full mb-2 text-black text-sm">
+                    <button class="bg-black text-white py-2 px-4 w-full text-sm">Contact</button>
+                </div>
+                <h2 class="text-2xl font-bold mt-6">Follow us</h2>
+                <div class="flex space-x-4 mt-4">
+                    <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-white"><i class="fab fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <div class="bg-white text-center py-4">
+        <p>All Rights reserved</p>
+    </div>
+</div>
+
+
+
+
+
+
+    
+</body>
+</html>
